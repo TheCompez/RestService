@@ -1,6 +1,9 @@
 ## RestService is a modern cross-platform RESTful library ##
 **Note :** This library is not yet complete and conceptually under development.
 
+
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/Kambiz-Asadzadeh/Kavenegar.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Kambiz-Asadzadeh/RestService/alerts/)
+[![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/Kambiz-Asadzadeh/Kavenegar.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Kambiz-Asadzadeh/RestService/context:cpp)
 ![Language iso: C++](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![Version](https://img.shields.io/badge/Version-0.4-lightgrey)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20iOS%20%7C%20Android%20%7C%20Web-lightgrey)
