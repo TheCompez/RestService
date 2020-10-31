@@ -37,3 +37,10 @@ int main(int argc, char *argv[])
 
 
 ```
+
+## Contribution
+Bug fixes, docs, and enhancements welcome! Please let me know kambiz.ceo@gmail.com
+
+## **ToDo**
+ * More Exception handling
+ * And more features...
