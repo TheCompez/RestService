@@ -19,6 +19,8 @@ First of all, You need to make sure that curl library is installed on your devel
 - Add RestService.dll [on Windows], libRestService.dylib [on macOS] or libRestService.so [on Linux] for your project as external library. you can compile it by static mode.
 - Import SDK common header ```#include <RestService>```
 
+**Note:** In order to build the create, your compiler must support C++17 features.
+
 ## Usage Example
 ```cpp
 
