@@ -31,15 +31,27 @@ cmake .. -DENABLE_SAFTY_MODE=true
 ## Usage Example
 ```cpp
 
+
 #include <iostream>
 #include <RestService>
 
-int main(int argc, char *argv[])
+int main()
 {
     auto request = RestService::NetworkRequest();
-    request.get("http://dummy.restapiexample.com/api/v1/employees");
-    auto result = request.getResult();
-    std::cout << "Result : " << result << std::endl;
+
+    //!GET Method
+    {
+        request.get("http://dummy.restapiexample.com/api/v1/employees");
+        auto result = request.getResult();
+        std::cout << "Result Get: " << result << std::endl;
+    }
+
+    //!POST Method
+    {
+        request.post("https://jsonplaceholder.typicode.com/comments?", "postId=1");
+        auto result2 = request.getResult();
+        std::cout << "Result Post : " << result2 << std::endl;
+    }
 
     return 0;
 }
