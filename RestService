@@ -1,0 +1,2 @@
+#include "include/networkrequest.hpp"
+#include "include/core.hpp"
