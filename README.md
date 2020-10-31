@@ -51,5 +51,6 @@ int main(int argc, char *argv[])
 Bug fixes, docs, and enhancements welcome! Please let me know kambiz.ceo@gmail.com
 
 ## **ToDo**
- * More Exception handling
+ * More Exception handling.
+ * Add Logger for any states.
  * And more features...
