@@ -21,6 +21,12 @@ First of all, You need to make sure that curl library is installed on your devel
 
 **Note:** In order to build the create, your compiler must support C++17 features.
 
+**Building extra option in CMake**
+```
+cmake .. -DENABLE_SAFE_ONLY=true 
+cmake .. -DENABLE_SAFTY_MODE=true 
+```
+
 ## Usage Example
 ```cpp
 
