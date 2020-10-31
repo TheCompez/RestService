@@ -51,7 +51,7 @@ void NetworkRequest::post(std::string_view url, std::string_view query){
     curl_global_init(CURL_GLOBAL_ALL);
 
     /* get a curl handle */
-    //curl = curl_easy_init();
+    curl = curl_easy_init();
 
     if(curl) {
 
