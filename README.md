@@ -1,5 +1,5 @@
 ## RestService is a modern cross-platform RESTful library ##
-**Note :** This library is not yet complete and is conceptually under development.
+**Note :** This library is not yet complete and conceptually under development.
 
 ![Language iso: C++](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![Version](https://img.shields.io/badge/Version-0.4-lightgrey)
