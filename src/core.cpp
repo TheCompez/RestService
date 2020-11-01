@@ -41,7 +41,7 @@ void Core::setContentType(Headers c){
 }
 
 
-std::string Core::whitespace_reduce(std::string_view str)
+std::string Core::whitespace_reduce(const std::string& str)
 {
 #if defined (_WIN64) || defined (__amd64__)
     uint64_t index;
@@ -54,15 +54,14 @@ std::string Core::whitespace_reduce(std::string_view str)
     return var;
 }
 
-std::string Core::whitespace_leading(std::string_view str)
+std::string Core::whitespace_leading(std::string str)
 {
-    std::string var = str.data();
-    while (isspace(*var.begin()))
-        var.erase(var.begin());
-    return var;
+  while (std::isspace(*str.begin()))
+  str.erase(str.begin());
+  return str;
 }
 
-std::string Core::escapeJSON(std::string_view input)
+std::string Core::escapeJSON(const std::string& input)
 {
     std::string output;
     output.reserve(input.length());
@@ -104,7 +103,7 @@ std::string Core::escapeJSON(std::string_view input)
     return whitespace_reduce(output);
 }
 
-std::string Core::unescapeJSON(std::string_view input)
+std::string Core::unescapeJSON(const std::string& input)
 {
     State s = UNESCAPED;
     std::string output;
@@ -178,7 +177,7 @@ ApiException::~ApiException()
 
 }
 
-void ApiException::setMessage(std::string_view message)
+void ApiException::setMessage(const std::string& message)
 {
     m_message = message;
 }

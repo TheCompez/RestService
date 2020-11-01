@@ -51,18 +51,18 @@ public:
      * \brief The HTTP Authorization request header contains the credentials to authenticate a user agent with a server,
      *  usually after the server has responded with a 401 Unauthorized status and the WWW-Authenticate header.
      */
-        inline static std::string_view Authorization = "Authorization";
+        inline static std::string Authorization = "Authorization";
 
         /*!
      * \brief USER_AGENT Contains a characteristic string that allows the network protocol peers to identify the application type, operating system,
      *  software vendor or software version of the requesting software user agent.
      */
-        inline static std::string_view USER_AGENT =  "User-Agent";
+        inline static std::string USER_AGENT =  "User-Agent";
 
         /*!
      * \brief The Keep-Alive general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests.
      */
-        inline static std::string_view KEEP_ALIVE = "Keep-Alive";
+        inline static std::string KEEP_ALIVE = "Keep-Alive";
     };
 
     /*!
@@ -75,7 +75,7 @@ public:
         /*!
      * \brief Basic is a common type for Authentication.
      */
-        inline static std::string_view  Basic = "Basic";
+        inline static std::string  Basic = "Basic";
 
     };
 
@@ -89,35 +89,35 @@ public:
      * \brief The Media type of the body of the request (used with POST and PUT requests).
      * Default. All characters are encoded before sent (spaces are converted to "+" symbols, and special characters are converted to ASCII HEX values)
      */
-        inline static std::string_view  APPLICATION_X_WWW_FROM_URLENCODED = "Content-Type: application/x-www-form-urlencoded";
+        inline static std::string  APPLICATION_X_WWW_FROM_URLENCODED = "Content-Type: application/x-www-form-urlencoded";
 
         /*!
      * \brief The MIME type of this content
      * Spaces are converted to "+" symbols, but no special characters are encoded
      */
-        inline static std::string_view  TEXT_HTML = "Content-Type: text/plain";
+        inline static std::string  TEXT_HTML = "Content-Type: text/plain";
 
         /*!
      * \brief The XHtml type of this content
      */
-        inline static std::string_view  APPLICATION_XHTML = "Content-Type: application/xhtml+xml";
+        inline static std::string  APPLICATION_XHTML = "Content-Type: application/xhtml+xml";
 
         /*!
      * \brief The Xml type of this content
      */
-        inline static std::string_view  APPLICATION_XML = "Content-Type: application/xml";
+        inline static std::string  APPLICATION_XML = "Content-Type: application/xml";
 
         /*!
      * \brief The JSon type of this content
      */
-        inline static std::string_view  APPLICATION_JSON = "Content-Type: application/json";
+        inline static std::string  APPLICATION_JSON = "Content-Type: application/json";
 
 
         /*!
      * \brief No characters are encoded.
      * This value is required when you are using forms that have a file upload control.
      */
-        inline static std::string_view  MULTIPART_FROM_DATA =  "Content-Type: multipart/form-data";
+        inline static std::string  MULTIPART_FROM_DATA =  "Content-Type: multipart/form-data";
     };
 
     /*!
@@ -240,31 +240,31 @@ public:
      * \param str with reduce string
      * \return
      */
-    [[maybe_unused]] std::string whitespace_reduce(std::string_view str);
+    [[maybe_unused]] std::string whitespace_reduce(const std::string& str);
 
     /*!
      * \brief whitespace_leading
      * \param str with leading string
      * \return
      */
-    [[maybe_unused]] std::string whitespace_leading(std::string_view str);
+    [[maybe_unused]] std::string whitespace_leading(std::string str);
 
     /*!
      * \brief escapeJSON
      * \param input for escaping from json template
      * \return
      */
-    [[maybe_unused]] std::string escapeJSON(std::string_view input);
+    [[maybe_unused]] std::string escapeJSON(const std::string& input);
 
     /*!
      * \brief unescapeJSON
      * \param input for unscaping json template
      * \return
      */
-    [[maybe_unused]] std::string unescapeJSON(std::string_view input);
+    [[maybe_unused]] std::string unescapeJSON(const std::string& input);
 
 public:
-    inline static std::string_view headerType = {NULL_STR};
+    inline static std::string headerType = {NULL_STR};
 
 };
 
@@ -292,7 +292,7 @@ public:
      * \brief setMessage
      * \param message
      */
-    [[maybe_unused]] void setMessage(std::string_view message);
+    [[maybe_unused]] void setMessage(const std::string& message);
 
     /*!
      * \brief setCode
@@ -301,7 +301,7 @@ public:
     [[maybe_unused]] void setCode(const int code);
 
 private:
-    inline static std::string_view m_message = {NULL_STR};
+    inline static std::string m_message = {NULL_STR};
     inline static int m_code = {0};
 
 };

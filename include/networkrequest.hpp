@@ -35,7 +35,7 @@ public:
      * \param username
      * \param password
      */
-    [[maybe_unused]] void setAuthorazation   (std::string_view username, std::string_view password);
+    [[maybe_unused]] void setAuthorazation   (const std::string& username, const std::string& password);
 
     /*!
      * brief WriteCallback : https://curl.haxx.se/libcurl/c/CURLOPT_WRITEFUNCTION.html
@@ -54,14 +54,14 @@ public:
      * \brief get method for send request
      * \param url is api uri
      */
-    [[maybe_unused]] void get(std::string_view url);
+    [[maybe_unused]] void get(const std::string& url);
 
     /*!
      * \brief post method for send request
      * \param url is api uri
      * \param query is parameters
      */
-    [[maybe_unused]] void post(std::string_view url, std::string_view query);
+    [[maybe_unused]] void post(const std::string& url, const std::string& query);
 
     /*!
      * \brief Returns result of network request.

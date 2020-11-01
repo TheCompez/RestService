@@ -45,7 +45,7 @@ void NetworkRequest::cleanGlobal() {
     curl_global_cleanup();
 }
 
-void NetworkRequest::post(std::string_view url, std::string_view query){
+void NetworkRequest::post(const std::string& url, const std::string& query){
 
     /* In windows, this will init the winsock stuff */
     curl_global_init(CURL_GLOBAL_ALL);
@@ -86,7 +86,7 @@ void NetworkRequest::post(std::string_view url, std::string_view query){
     }
 }
 
-void NetworkRequest::get(std::string_view url)
+void NetworkRequest::get(const std::string& url)
 {
     if(curl) {
         if(Core::isset(Core::headerType)) {
