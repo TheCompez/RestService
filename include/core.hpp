@@ -247,7 +247,7 @@ public:
      * \param str with leading string
      * \return
      */
-    [[maybe_unused]] std::string whitespace_leading(std::string str);
+    [[maybe_unused]] std::string whitespace_leading(const std::string &str);
 
     /*!
      * \brief escapeJSON

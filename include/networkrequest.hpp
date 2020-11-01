@@ -85,7 +85,7 @@ protected:
      * \brief Result function for set result.
      * \param res
      */
-    void setResult          (const std::string& res);
+    void setResult  (const std::string& res);
 
     /*!
      * \brief Progress function for set percent of progress

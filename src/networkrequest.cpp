@@ -131,17 +131,13 @@ void NetworkRequest::get(const std::string& url)
 
         /* Check for errors */
         if(res != CURLE_OK)
-            fprintf(stderr, "curl_easy_perform() failed: %s\n",
-                    curl_easy_strerror(res));
-
-        //std::clog << "Original : " << readBuffer << std::endl;
+            fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
 
         std::cout << "Done!" << std::endl;
 
         setResult(readBuffer);
 
         /* always cleanup */
-        //clean();
         curl_easy_cleanup(curl);
     }
 }

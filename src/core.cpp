@@ -54,11 +54,12 @@ std::string Core::whitespace_reduce(const std::string& str)
     return var;
 }
 
-std::string Core::whitespace_leading(std::string str)
+std::string Core::whitespace_leading(const std::string& str)
 {
-  while (std::isspace(*str.begin()))
-  str.erase(str.begin());
-  return str;
+  std::string temp = str;
+  while (std::isspace(*temp.begin()))
+  temp.erase(temp.begin());
+  return temp;
 }
 
 std::string Core::escapeJSON(const std::string& input)
